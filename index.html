@@ -454,7 +454,7 @@ async function generate() {
   var prompt = 'Eres un experto en copywriting viral y neurociencia aplicada al marketing de contenidos para Instagram.\n\nGenera exactamente ' + hooksQty + ' hooks virales para Instagram Reels con estas especificaciones:\n\nTEORÍAS DE NEUROCIENCIA: ' + theories.join(', ') + '\nOBJETIVO: ' + objectives.join(', ') + '\nNICHO: ' + niche + '\nTONO: ' + tone + (context ? '\nCONTEXTO: ' + context : '') + '\n\nPara cada hook devuelve un objeto con:\n- hook: texto del hook (máximo 2 frases, directo, listo para pantalla o cámara)\n- theory: teoría principal aplicada (solo una)\n- objective: objetivo principal (solo uno)\n- why: por qué funciona neurológicamente (1 frase concisa)\n\nDevuelve ÚNICAMENTE un array JSON válido. Sin texto extra, sin markdown, sin backticks.';
 
   try {
-    var res = await fetch('https://hooks-api.vercel.app/api/generate', {
+    var res = await fetch('https://project-e6f7v-oxw2smeg9-alexandra-s-projects1.vercel.app/api/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
