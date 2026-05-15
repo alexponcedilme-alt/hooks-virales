@@ -315,21 +315,21 @@ footer a{color:var(--accent);text-decoration:none}
       <li>Las 9 teorías de neurociencia completas</li>
       <li>Sin restricciones de ningún tipo</li>
     </ul>
-    <div class="modal-price">$7 <span>/ mes</span></div>
-    <a href="https://buy.stripe.com/28EbJ1chJ1fib4H0gFd7q01" target="_blank" class="modal-cta">Quiero acceso Pro →</a>
-    <div class="modal-sub">Cancela cuando quieras · Acceso inmediato</div>
+    <div class="modal-price">$27 <span>/ pago único</span></div>
+    <a href="https://buy.stripe.com/7sYcN581t4ru4Gj6F3d7q02" target="_blank" class="modal-cta">Quiero acceso Pro →</a>
+    <div class="modal-sub">Pago único · Acceso de por vida</div>
   </div>
 </div>
 
 <script>
-var PAID_URL = 'https://buy.stripe.com/28EbJ1chJ1fib4H0gFd7q01';
+var PAID_URL = 'https://buy.stripe.com/7sYcN581t4ru4Gj6F3d7q02';
 var FREE_LIMIT = 5;
 var FREE_MAX_HOOKS = 3;
 var qty = 3;
 
 function isPro() {
   var params = new URLSearchParams(window.location.search);
-  if (params.get('access') === 'LANUBE2026') {
+  if (params.get('access') === 'xK7mP9qR2vL5nJ8wD4hF6') {
     localStorage.setItem('pro_access', 'true');
   }
   return localStorage.getItem('pro_access') === 'true';
@@ -374,7 +374,7 @@ function updateUI() {
       badge.innerHTML = 'Versión gratuita &middot; <strong>' + remaining + ' generaciones</strong> disponibles hoy';
       badge.className = 'usage-badge free';
     } else {
-      badge.innerHTML = 'Has agotado tus generaciones de hoy &middot; <a href="' + PAID_URL + '" target="_blank">Hazte Pro por $7/mes →</a>';
+      badge.innerHTML = 'Has agotado tus generaciones de hoy &middot; <a href="' + PAID_URL + '" target="_blank">Hazte Pro por $27 →</a>';
       badge.className = 'usage-badge empty';
     }
     document.querySelectorAll('[data-free="false"]').forEach(function(chip) {
